@@ -730,8 +730,8 @@
         <div class="rsvp-overlay-select-wrap">
           <select id="rsvpAttendance" name="rsvpAttendance" class="rsvp-overlay-select" required aria-label="Will you be joining us?">
             <option value="" disabled selected>Please select your response</option>
-            <option value="attending">Joyfully Accepts</option>
-            <option value="declining">Regretfully Declines</option>
+            <option value="Joyfully Accept">Joyfully Accept</option>
+            <option value="Respectfully Declines">Respectfully Declines</option>
           </select>
           <span class="rsvp-overlay-chevron">&#9662;</span>
         </div>
@@ -878,7 +878,7 @@
       setInterval(updateCountdown, 1000);
     })();
 
-    /* ── RSVP FORM CONTROLLER ── */
+    /* ── RSVP FORM CONTROLLER (GOOGLE FORMS & SHEETS SYNC) ── */
     function handleRsvpSubmit(e) {
       e.preventDefault();
       var successCard = document.getElementById('rsvpSuccess');
@@ -895,19 +895,37 @@
         return;
       }
 
+      // Save locally in browser
       var rsvpData = {
         name: name,
         attendance: attendance,
         timestamp: new Date().toISOString()
       };
-
       try {
         localStorage.setItem('ryan_cheryl_rsvp', JSON.stringify(rsvpData));
       } catch (err) {}
 
+      // Silently record directly into Google Forms & Google Sheets in the background
+      try {
+        var formData = new URLSearchParams();
+        formData.append('entry.1712310200', name);
+        formData.append('entry.281317823', attendance);
+
+        fetch('https://docs.google.com/forms/d/e/1FAIpQLScojIoqsYnAEjXtaOXAbOTQoSQ5J8tMiFew-Gu9KrTIBbnRRA/formResponse', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: formData.toString()
+        }).catch(function () {});
+      } catch (err) {}
+
+      // Display luxurious confirmation overlay
       successCard.style.display = 'flex';
 
-      if (attendance === 'attending') {
+      var isAttending = attendance.indexOf('Accept') !== -1;
+      if (isAttending) {
         successText.innerHTML = 'Dear <strong>' + name + '</strong>,<br>We are truly overjoyed and look forward to celebrating our wedding with you at Costa\'s Countryside, Goa on December 3, 2026!';
         var msg = encodeURIComponent('Hi Ryan & Cheryl, I (' + name + ') joyfully accept your wedding invitation for December 3, 2026 in Goa! ✨');
         waBtn.href = 'https://api.whatsapp.com/send?text=' + msg;
