@@ -10,7 +10,7 @@
   <meta property="og:image" content="images/envelope_rc_teal.jpg" />
   <meta property="og:type" content="website" />
   
-  <link rel="icon" type="image/png" sizes="32x32" href="images/cdn/favicon-light_1.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-light_1.png" />
   <link rel="stylesheet" type="text/css" href="css/fonts.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -234,7 +234,7 @@
       object-fit: cover;
     }
 
-    /* ── PAGE 2: INTERACTIVE LIVE COUNTDOWN ── */
+    /* ── PAGE 3: INTERACTIVE LIVE COUNTDOWN ── */
     .countdown-overlay {
       position: absolute;
       top: 24.6%;
@@ -312,264 +312,136 @@
       height: 4.6%;
     }
 
-    /* ── PAGE 7: PLAIN ARCHED LUXURY RSVP SECTION ── */
-    .rsvp-plain-card {
-      position: relative;
-      width: 100%;
-      background: radial-gradient(circle at 50% 25%, #053b4e 0%, #022b3b 50%, #011822 100%);
-      padding: clamp(28px, 6cqw, 42px) clamp(16px, 4cqw, 24px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.6);
-      container-type: inline-size;
-      container-name: rsvpCard;
-    }
-
-    .rsvp-plain-arch-outer {
-      width: 100%;
-      max-width: 440px;
-      border: 1.5px solid rgba(229, 195, 120, 0.7);
-      border-radius: 200px 200px 20px 20px;
-      padding: 5px;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-      background: rgba(2, 28, 38, 0.35);
-    }
-
-    .rsvp-plain-arch-inner {
-      width: 100%;
-      border: 1px solid rgba(229, 195, 120, 0.4);
-      border-radius: 194px 194px 15px 15px;
-      padding: clamp(26px, 6cqw, 38px) clamp(18px, 4cqw, 28px) clamp(24px, 5cqw, 32px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background: rgba(2, 28, 38, 0.45);
-      position: relative;
-    }
-
-    .rsvp-top-deco {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .rsvp-h-line {
-      height: 1px;
-      flex: 1;
-      max-width: 55px;
-      background: linear-gradient(90deg, transparent, rgba(229, 195, 120, 0.65), transparent);
-    }
-
-    .rsvp-envelope-svg {
-      width: 22px;
-      height: 22px;
-      color: #E5C378;
-      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
-    }
-
-    .rsvp-heading-script {
-      font-family: var(--font-script);
-      font-size: clamp(28px, 7.2cqw, 38px);
-      color: #E5C378;
-      line-height: 1.1;
-      font-weight: 400;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-      letter-spacing: 0.02em;
-    }
-
-    .rsvp-heading-title {
-      font-family: var(--font-serif);
-      font-size: clamp(17px, 4.4cqw, 23px);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #FFF8EE;
-      font-weight: 600;
-      margin-top: 3px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
-    }
-
-    .rsvp-heart-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      margin: 10px 0 12px;
-    }
-
-    .rsvp-heart-glyph {
-      color: #E5C378;
-      font-size: 11px;
-      line-height: 1;
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
-    }
-
-    .rsvp-subtitle {
-      font-family: var(--font-sans);
-      font-size: clamp(11px, 2.6cqw, 13px);
-      color: rgba(247, 239, 228, 0.88);
-      line-height: 1.55;
-      max-width: 320px;
-      margin: 0 auto 12px;
-      font-weight: 400;
-    }
-
-    .rsvp-diamond-glyph {
-      color: #C5A059;
-      font-size: 8px;
-      line-height: 1;
-      margin-bottom: 18px;
-    }
-
-    .rsvp-plain-form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      text-align: left;
-    }
-
-    .rsvp-field-group {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      width: 100%;
-    }
-
-    .rsvp-field-label {
-      font-family: var(--font-sans);
-      font-size: clamp(11.5px, 2.6cqw, 13px);
-      color: #F7EFE4;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
-
-    .rsvp-field-input {
-      width: 100%;
-      background: rgba(2, 22, 30, 0.85);
-      border: 1px solid rgba(197, 160, 89, 0.55);
-      border-radius: 7px;
-      padding: clamp(9px, 2.3cqw, 12px) 14px;
+    /* ── PAGE 7: OVERLAY RSVP INTERACTION ── */
+    .rsvp-overlay-input {
+      position: absolute;
+      top: 51.5%;
+      left: 12.6%;
+      width: 74.8%;
+      height: 5.4%;
+      background: #06313f;
+      border: 1px solid rgba(197, 160, 89, 0.75);
+      border-radius: 8px;
+      padding: 0 16px;
       color: #FFFFFF;
       font-family: var(--font-sans);
-      font-size: clamp(12px, 2.7cqw, 14px);
+      font-size: clamp(12px, 3.2cqw, 15px);
+      font-weight: 400;
       outline: none;
-      transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      z-index: 10;
     }
 
-    .rsvp-field-input:focus {
+    .rsvp-overlay-input:focus {
       border-color: #E5C378;
-      box-shadow: 0 0 14px rgba(229, 195, 120, 0.35);
-      background: rgba(2, 22, 30, 0.98);
+      box-shadow: 0 0 12px rgba(229, 195, 120, 0.45), inset 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .rsvp-field-input::placeholder {
-      color: rgba(229, 195, 120, 0.45);
+    .rsvp-overlay-input::placeholder {
+      color: rgba(229, 195, 120, 0.65);
       font-style: normal;
     }
 
-    .rsvp-select-wrapper {
-      position: relative;
-      width: 100%;
+    .rsvp-overlay-select-wrap {
+      position: absolute;
+      top: 62.5%;
+      left: 12.6%;
+      width: 74.8%;
+      height: 5.5%;
+      z-index: 10;
     }
 
-    .rsvp-field-select {
+    .rsvp-overlay-select {
       width: 100%;
+      height: 100%;
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-      background: rgba(2, 22, 30, 0.85);
-      border: 1px solid rgba(197, 160, 89, 0.55);
-      border-radius: 7px;
-      padding: clamp(9px, 2.3cqw, 12px) 36px clamp(9px, 2.3cqw, 12px) 14px;
+      background: #06313f;
+      border: 1px solid rgba(197, 160, 89, 0.75);
+      border-radius: 8px;
+      padding: 0 38px 0 16px;
       color: #FFFFFF;
       font-family: var(--font-sans);
-      font-size: clamp(12px, 2.7cqw, 14px);
+      font-size: clamp(12px, 3.2cqw, 15px);
       outline: none;
       cursor: pointer;
-      transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
-    .rsvp-field-select:focus {
+    .rsvp-overlay-select:focus {
       border-color: #E5C378;
-      box-shadow: 0 0 14px rgba(229, 195, 120, 0.35);
-      background: rgba(2, 22, 30, 0.98);
+      box-shadow: 0 0 12px rgba(229, 195, 120, 0.45), inset 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .rsvp-field-select option {
+    .rsvp-overlay-select option {
       background: #02202B;
       color: #F7EFE4;
       padding: 10px;
     }
 
-    .rsvp-select-chevron {
+    .rsvp-overlay-chevron {
       position: absolute;
       right: 14px;
       top: 50%;
       transform: translateY(-50%);
       pointer-events: none;
       color: #E5C378;
-      font-size: 13px;
+      font-size: 14px;
     }
 
-    .rsvp-action-btn {
-      width: 100%;
-      background: linear-gradient(135deg, #ECCB84 0%, #D4AF37 50%, #A47D28 100%);
+    .rsvp-overlay-btn {
+      position: absolute;
+      top: 71.6%;
+      left: 12.6%;
+      width: 74.8%;
+      height: 6.8%;
+      background: transparent;
       border: none;
-      border-radius: 26px;
-      color: #021C27;
-      font-family: var(--font-serif);
-      font-size: clamp(11px, 2.6cqw, 13px);
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      border-radius: 30px;
       cursor: pointer;
-      padding: clamp(10px, 2.6cqw, 13px) 20px;
-      margin-top: 8px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      z-index: 10;
       -webkit-tap-highlight-color: transparent;
+      outline: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .rsvp-action-btn:hover, .rsvp-action-btn:active {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 6px 24px rgba(229, 195, 120, 0.6);
-      filter: brightness(1.05);
+    .rsvp-overlay-btn:hover, .rsvp-overlay-btn:active {
+      transform: scale(1.02);
+      box-shadow: 0 0 22px rgba(229, 195, 120, 0.6);
+      background-color: rgba(229, 195, 120, 0.08);
     }
 
-    .rsvp-btn-svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .rsvp-deadline-text {
-      font-family: var(--font-serif);
-      font-size: clamp(10px, 2.3cqw, 11.5px);
-      letter-spacing: 0.08em;
-      color: rgba(229, 195, 120, 0.85);
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-    /* Success State */
-    .rsvp-plain-success {
+    /* Success State Modal Overlay */
+    .rsvp-success-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(1, 24, 34, 0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       display: none;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: clamp(16px, 4cqw, 24px) 12px;
-      animation: fadeIn 0.45s ease-out both;
+      padding: 24px;
+      z-index: 30;
+      animation: fadeIn 0.4s ease-out both;
+    }
+
+    .rsvp-success-box {
       width: 100%;
+      max-width: 380px;
+      border: 1.5px solid rgba(229, 195, 120, 0.65);
+      border-radius: 18px;
+      padding: clamp(24px, 5cqw, 36px) clamp(16px, 4cqw, 24px);
+      text-align: center;
+      background: radial-gradient(circle at 50% 30%, #053b4e 0%, #02232f 100%);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     @keyframes fadeIn {
@@ -579,7 +451,7 @@
 
     .rsvp-success-heart {
       color: #E5C378;
-      font-size: 26px;
+      font-size: 28px;
       margin-bottom: 8px;
       animation: pulseHeart 1.8s ease-in-out infinite;
     }
@@ -591,9 +463,9 @@
 
     .rsvp-success-title {
       font-family: var(--font-serif);
-      font-size: clamp(16px, 4.2cqw, 21px);
+      font-size: clamp(16px, 4.2cqw, 20px);
       color: #E5C378;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 10px;
@@ -601,11 +473,19 @@
 
     .rsvp-success-msg {
       font-family: var(--font-sans);
-      font-size: clamp(12px, 2.8cqw, 14px);
+      font-size: clamp(12px, 2.8cqw, 13.5px);
       color: #F7EFE4;
       line-height: 1.6;
       margin-bottom: 18px;
-      max-width: 320px;
+      max-width: 310px;
+    }
+
+    .rsvp-success-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      align-items: center;
     }
 
     .rsvp-whatsapp-btn {
@@ -616,18 +496,40 @@
       background: #25D366;
       color: #FFFFFF;
       font-family: var(--font-sans);
-      font-size: clamp(11.5px, 2.5cqw, 13px);
+      font-size: 13px;
       font-weight: 600;
       text-decoration: none;
-      padding: 10px 20px;
+      padding: 11px 22px;
       border-radius: 24px;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
       transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%;
+      max-width: 260px;
     }
 
     .rsvp-whatsapp-btn:hover {
       transform: translateY(-1px) scale(1.02);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+    }
+
+    .rsvp-reset-btn {
+      background: transparent;
+      border: 1px solid rgba(229, 195, 120, 0.4);
+      color: rgba(229, 195, 120, 0.85);
+      font-family: var(--font-serif);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 6px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .rsvp-reset-btn:hover {
+      background: rgba(229, 195, 120, 0.15);
+      color: #FFFFFF;
     }
 
     /* ── FOOTER ── */
@@ -696,7 +598,7 @@
   <!-- Main Invitation Booklet Container -->
   <main id="invitationApp">
 
-    <!-- PAGE 1: HERO / ANNOUNCEMENT -->
+    <!-- PAGE 1: HERO / ANNOUNCEMENT (Image 1) -->
     <section class="invite-card" id="page1" aria-label="The Wedding of Ryan and Cheryl">
       <img
         class="invite-card-img"
@@ -706,14 +608,24 @@
       />
     </section>
 
-    <!-- PAGE 2: OUR CELEBRATION COUNTDOWN BEGINS -->
-    <section class="invite-card" id="page2" aria-label="Wedding Countdown">
+    <!-- PAGE 2: OUR FAVOURITE CHAPTER BEGIN (Image 2) -->
+    <section class="invite-card" id="page2" aria-label="Our Favourite Chapter Begin">
       <img
         class="invite-card-img"
-        src="images/page2_countdown_clean.jpg"
+        src="images/page2_our_favourite_chapter.jpg"
+        alt="Our favourite chapter begin - Together with our families, with love, you are invited - Dear friends and family"
+        loading="lazy"
+      />
+    </section>
+
+    <!-- PAGE 3: OUR CELEBRATION COUNTDOWN BEGINS (Image 3) -->
+    <section class="invite-card" id="page3" aria-label="Wedding Countdown">
+      <img
+        class="invite-card-img"
+        src="images/page3_countdown_clean.jpg"
         alt="Our Celebration Countdown Begins - Ryan & Cheryl"
         loading="lazy"
-        onerror="this.src='images/page2_countdown.jpg';"
+        onerror="this.src='images/page3_countdown.jpg';"
       />
       <!-- Dynamic Live Countdown Overlaid Directly Inside The 4 Arches -->
       <div class="countdown-overlay" id="countdownTimer" aria-live="polite">
@@ -732,8 +644,7 @@
       </div>
     </section>
 
-
-    <!-- PAGE 4: EVERY LOVELY MOMENT (SCHEDULE) -->
+    <!-- PAGE 4: EVERY LOVELY MOMENT (SCHEDULE) (Image 4) -->
     <section class="invite-card" id="page4" aria-label="Schedule of Events">
       <img
         class="invite-card-img"
@@ -743,7 +654,7 @@
       />
     </section>
 
-    <!-- PAGE 5: THE NUPTIALS (HOLY SPIRIT CHURCH, MARGAO) -->
+    <!-- PAGE 5: THE NUPTIALS (HOLY SPIRIT CHURCH, MARGAO) (Image 5) -->
     <section class="invite-card" id="page5" aria-label="Church Nuptials Ceremony">
       <img
         class="invite-card-img"
@@ -763,7 +674,7 @@
       ></a>
     </section>
 
-    <!-- PAGE 6: WHERE WE CELEBRATE (COSTA'S COUNTRYSIDE, VARCA) -->
+    <!-- PAGE 6: WHERE WE CELEBRATE (COSTA'S COUNTRYSIDE, VARCA) (Image 6) -->
     <section class="invite-card" id="page6" aria-label="Reception Venue: Costa's Countryside, Varca">
       <img
         class="invite-card-img"
@@ -793,105 +704,63 @@
       ></a>
     </section>
 
-    <!-- PAGE 7: PLAIN ARCHED LUXURY RSVP SECTION -->
-    <section class="rsvp-plain-card" id="page7" aria-label="RSVP Response">
-      <div class="rsvp-plain-arch-outer">
-        <div class="rsvp-plain-arch-inner">
-          
-          <!-- Top Decorative Envelope Icon with Gold Lines -->
-          <div class="rsvp-top-deco">
-            <span class="rsvp-h-line"></span>
-            <svg class="rsvp-envelope-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <span class="rsvp-h-line"></span>
-          </div>
+    <!-- PAGE 7: THE PLEASURE OF YOUR COMPANY (RSVP) (Image 7) -->
+    <section class="invite-card" id="page7" aria-label="RSVP Response">
+      <img
+        class="invite-card-img"
+        src="images/page7_rsvp.png"
+        alt="The pleasure of YOUR COMPANY - RSVP - Ryan & Cheryl"
+        loading="lazy"
+      />
+      <!-- Interactive RSVP Form Overlaid Seamlessly -->
+      <form id="rsvpForm" onsubmit="handleRsvpSubmit(event)">
+        <!-- Guest Full Name Input Box -->
+        <input
+          type="text"
+          id="guestName"
+          name="guestName"
+          class="rsvp-overlay-input"
+          placeholder="First and last name"
+          required
+          autocomplete="name"
+          aria-label="Your full name"
+        />
 
-          <!-- Elegant Typography Headings -->
-          <div class="rsvp-heading-script">The pleasure of</div>
-          <h2 class="rsvp-heading-title">YOUR COMPANY</h2>
+        <!-- Attendance Dropdown Select Box -->
+        <div class="rsvp-overlay-select-wrap">
+          <select id="rsvpAttendance" name="rsvpAttendance" class="rsvp-overlay-select" required aria-label="Will you be joining us?">
+            <option value="" disabled selected>Please select your response</option>
+            <option value="attending">Joyfully Accepts</option>
+            <option value="declining">Regretfully Declines</option>
+          </select>
+          <span class="rsvp-overlay-chevron">&#9662;</span>
+        </div>
 
-          <!-- Delicate Heart Divider -->
-          <div class="rsvp-heart-divider">
-            <span class="rsvp-h-line"></span>
-            <span class="rsvp-heart-glyph">&#9829;</span>
-            <span class="rsvp-h-line"></span>
-          </div>
+        <!-- Hotspot Submit Button -->
+        <button type="submit" class="rsvp-overlay-btn" id="btnSubmitRsvp" title="Prepare RSVP Response" aria-label="Prepare RSVP Response">
+        </button>
+      </form>
 
-          <!-- Warm Welcome Subtitle -->
-          <p class="rsvp-subtitle">
-            Your presence would make our day even more special. Please let us know if you can join us.
-          </p>
-
-          <!-- Small Gold Diamond -->
-          <div class="rsvp-diamond-glyph">&#9670;</div>
-
-          <!-- Clean Minimal RSVP Form (No Guest Count, No Dietary Notes) -->
-          <form class="rsvp-plain-form" id="rsvpForm" onsubmit="handleRsvpSubmit(event)">
-            <!-- Guest Full Name -->
-            <div class="rsvp-field-group">
-              <label class="rsvp-field-label" for="guestName">Your full name</label>
-              <input
-                type="text"
-                id="guestName"
-                name="guestName"
-                class="rsvp-field-input"
-                placeholder="First and last name"
-                required
-                autocomplete="name"
-              />
-            </div>
-
-            <!-- Attendance Response Dropdown -->
-            <div class="rsvp-field-group">
-              <label class="rsvp-field-label" for="rsvpAttendance">Will you be joining us?</label>
-              <div class="rsvp-select-wrapper">
-                <select id="rsvpAttendance" name="rsvpAttendance" class="rsvp-field-select" required>
-                  <option value="" disabled selected>Please select your response</option>
-                  <option value="attending">Joyfully Accepts</option>
-                  <option value="declining">Regretfully Declines</option>
-                </select>
-                <span class="rsvp-select-chevron">&#9662;</span>
-              </div>
-            </div>
-
-            <!-- Luxurious Gold Submit Button -->
-            <button type="submit" class="rsvp-action-btn" id="btnSubmitRsvp">
-              <svg class="rsvp-btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <span>CONFIRM RSVP</span>
-            </button>
-          </form>
-
-          <!-- Confirmation Feedback State -->
-          <div class="rsvp-plain-success" id="rsvpSuccess">
-            <div class="rsvp-success-heart">&#9829;</div>
-            <div class="rsvp-success-title">Warm Thanks!</div>
-            <p class="rsvp-success-msg" id="rsvpSuccessText"></p>
+      <!-- Success Feedback Overlay Modal -->
+      <div class="rsvp-success-overlay" id="rsvpSuccess">
+        <div class="rsvp-success-box">
+          <div class="rsvp-success-heart">&#9829;</div>
+          <div class="rsvp-success-title">Warm Thanks!</div>
+          <p class="rsvp-success-msg" id="rsvpSuccessText"></p>
+          <div class="rsvp-success-actions">
             <a id="rsvpWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="rsvp-whatsapp-btn" style="display:none;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.056-1.921-.476-1.554-.641-2.551-2.221-2.628-2.325-.077-.104-.633-.842-.633-1.608 0-.765.399-1.144.542-1.301.143-.157.312-.197.417-.197.104 0 .208.002.299.006.096.004.225-.036.352.269.13.312.443 1.077.482 1.156.039.078.065.17.013.273-.052.104-.078.17-.156.26-.078.092-.164.204-.235.274-.078.078-.16.162-.069.318.091.156.403.665.865 1.076.595.53 1.097.694 1.253.772.156.078.247.065.339-.039.091-.104.39-.455.494-.611.104-.156.208-.13.348-.078.14.052.886.417 1.039.494.153.078.256.117.294.182.039.065.039.377-.105.782z"/>
               </svg>
               <span>Share via WhatsApp</span>
             </a>
+            <button type="button" class="rsvp-reset-btn" onclick="resetRsvp()">Change Response</button>
           </div>
-
-          <!-- Bottom Decorative Divider & RSVP Deadline -->
-          <div class="rsvp-heart-divider" style="margin-top: 18px; margin-bottom: 8px;">
-            <span class="rsvp-h-line"></span>
-            <span class="rsvp-heart-glyph">&#9829;</span>
-            <span class="rsvp-h-line"></span>
-          </div>
-          <p class="rsvp-deadline-text">Kindly respond by November 15, 2026</p>
-
         </div>
       </div>
     </section>
 
-    <!-- PAGE 8: THE BEGINNING OF OUR FOREVER (CLOSING CARD) -->
+    <!-- PAGE 8: THE BEGINNING OF OUR FOREVER (CLOSING CARD) (Image 8) -->
     <section class="invite-card" id="page8" aria-label="The Beginning of Our Forever - Ryan and Cheryl">
       <img
         class="invite-card-img"
@@ -1009,10 +878,9 @@
       setInterval(updateCountdown, 1000);
     })();
 
-    /* ── RSVP FORM CONTROLLER (PLAIN ARCHED LUXURY STYLE) ── */
+    /* ── RSVP FORM CONTROLLER ── */
     function handleRsvpSubmit(e) {
       e.preventDefault();
-      var form = document.getElementById('rsvpForm');
       var successCard = document.getElementById('rsvpSuccess');
       var successText = document.getElementById('rsvpSuccessText');
       var waBtn = document.getElementById('rsvpWhatsappBtn');
@@ -1037,7 +905,6 @@
         localStorage.setItem('ryan_cheryl_rsvp', JSON.stringify(rsvpData));
       } catch (err) {}
 
-      form.style.display = 'none';
       successCard.style.display = 'flex';
 
       if (attendance === 'attending') {
@@ -1052,6 +919,25 @@
         waBtn.style.display = 'inline-flex';
       }
     }
+
+    function resetRsvp() {
+      var successCard = document.getElementById('rsvpSuccess');
+      if (successCard) {
+        successCard.style.display = 'none';
+      }
+    }
+
+    /* Restore previously saved RSVP on page load */
+    (function () {
+      try {
+        var saved = localStorage.getItem('ryan_cheryl_rsvp');
+        if (saved) {
+          var data = JSON.parse(saved);
+          if (data.name) document.getElementById('guestName').value = data.name;
+          if (data.attendance) document.getElementById('rsvpAttendance').value = data.attendance;
+        }
+      } catch (e) {}
+    })();
   </script>
 </body>
 </html>
