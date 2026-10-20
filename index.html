@@ -315,10 +315,10 @@
     /* ── PAGE 7: OVERLAY RSVP INTERACTION ── */
     .rsvp-overlay-input {
       position: absolute;
-      top: 51.5%;
-      left: 12.6%;
-      width: 74.8%;
-      height: 5.4%;
+      top: 52.8%;
+      left: 12.3%;
+      width: 75.4%;
+      height: 5.3%;
       background: #06313f;
       border: 1px solid rgba(197, 160, 89, 0.75);
       border-radius: 8px;
@@ -345,10 +345,10 @@
 
     .rsvp-overlay-select-wrap {
       position: absolute;
-      top: 62.5%;
-      left: 12.6%;
-      width: 74.8%;
-      height: 5.5%;
+      top: 64.5%;
+      left: 12.3%;
+      width: 75.4%;
+      height: 5.6%;
       z-index: 10;
     }
 
@@ -394,13 +394,13 @@
 
     .rsvp-overlay-btn {
       position: absolute;
-      top: 71.6%;
-      left: 12.6%;
-      width: 74.8%;
-      height: 6.8%;
+      top: 73.9%;
+      left: 11.6%;
+      width: 76.6%;
+      height: 7.4%;
       background: transparent;
       border: none;
-      border-radius: 30px;
+      border-radius: 35px;
       cursor: pointer;
       z-index: 10;
       -webkit-tap-highlight-color: transparent;
@@ -410,7 +410,24 @@
 
     .rsvp-overlay-btn:hover, .rsvp-overlay-btn:active {
       transform: scale(1.02);
-      box-shadow: 0 0 22px rgba(229, 195, 120, 0.6);
+      box-shadow: 0 0 25px rgba(229, 195, 120, 0.65);
+      background-color: rgba(229, 195, 120, 0.08);
+    }
+
+    .rsvp-direct-google-link {
+      position: absolute;
+      top: 87.2%;
+      left: 12%;
+      width: 76%;
+      height: 4%;
+      z-index: 10;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+      border-radius: 12px;
+    }
+
+    .rsvp-direct-google-link:hover {
       background-color: rgba(229, 195, 120, 0.08);
     }
 
@@ -483,33 +500,36 @@
     .rsvp-success-actions {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       width: 100%;
       align-items: center;
     }
 
-    .rsvp-whatsapp-btn {
+    .rsvp-google-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      background: #25D366;
-      color: #FFFFFF;
-      font-family: var(--font-sans);
-      font-size: 13px;
-      font-weight: 600;
+      gap: 10px;
+      background: linear-gradient(135deg, #F3DFAC 0%, #C5A059 50%, #9F7635 100%);
+      color: #021E29;
+      font-family: var(--font-serif);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       text-decoration: none;
-      padding: 11px 22px;
-      border-radius: 24px;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      padding: 13px 24px;
+      border-radius: 28px;
+      box-shadow: 0 4px 20px rgba(229, 195, 120, 0.45);
       transition: transform 0.2s, box-shadow 0.2s;
       width: 100%;
-      max-width: 260px;
+      max-width: 270px;
     }
 
-    .rsvp-whatsapp-btn:hover {
+    .rsvp-google-btn:hover {
       transform: translateY(-1px) scale(1.02);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+      box-shadow: 0 6px 26px rgba(229, 195, 120, 0.65);
+      color: #011219;
     }
 
     .rsvp-reset-btn {
@@ -523,7 +543,7 @@
       padding: 8px 18px;
       border-radius: 20px;
       cursor: pointer;
-      margin-top: 6px;
+      margin-top: 4px;
       transition: background-color 0.2s, color 0.2s;
     }
 
@@ -720,7 +740,7 @@
           id="guestName"
           name="guestName"
           class="rsvp-overlay-input"
-          placeholder="First and last name"
+          placeholder="Enter your full name"
           required
           autocomplete="name"
           aria-label="Your full name"
@@ -729,7 +749,7 @@
         <!-- Attendance Dropdown Select Box -->
         <div class="rsvp-overlay-select-wrap">
           <select id="rsvpAttendance" name="rsvpAttendance" class="rsvp-overlay-select" required aria-label="Will you be joining us?">
-            <option value="" disabled selected>Please select your response</option>
+            <option value="" disabled selected>Select your response</option>
             <option value="Joyfully Accept">Joyfully Accept</option>
             <option value="Respectfully Declines">Respectfully Declines</option>
           </select>
@@ -737,22 +757,33 @@
         </div>
 
         <!-- Hotspot Submit Button -->
-        <button type="submit" class="rsvp-overlay-btn" id="btnSubmitRsvp" title="Prepare RSVP Response" aria-label="Prepare RSVP Response">
+        <button type="submit" class="rsvp-overlay-btn" id="btnSubmitRsvp" title="RSVP Now — Open Google Form" aria-label="RSVP Now — Open Google Form">
         </button>
+
+        <!-- Direct Hotspot on bottom text 'Tap RSVP Now to continue to our Google Form' -->
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScojIoqsYnAEjXtaOXAbOTQoSQ5J8tMiFew-Gu9KrTIBbnRRA/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rsvp-direct-google-link"
+          title="Open Google Form"
+          aria-label="Open Google Form"
+        ></a>
       </form>
 
       <!-- Success Feedback Overlay Modal -->
       <div class="rsvp-success-overlay" id="rsvpSuccess">
         <div class="rsvp-success-box">
           <div class="rsvp-success-heart">&#9829;</div>
-          <div class="rsvp-success-title">Warm Thanks!</div>
+          <div class="rsvp-success-title">RSVP Submitted!</div>
           <p class="rsvp-success-msg" id="rsvpSuccessText"></p>
           <div class="rsvp-success-actions">
-            <a id="rsvpWhatsappBtn" href="#" target="_blank" rel="noopener noreferrer" class="rsvp-whatsapp-btn" style="display:none;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.056-1.921-.476-1.554-.641-2.551-2.221-2.628-2.325-.077-.104-.633-.842-.633-1.608 0-.765.399-1.144.542-1.301.143-.157.312-.197.417-.197.104 0 .208.002.299.006.096.004.225-.036.352.269.13.312.443 1.077.482 1.156.039.078.065.17.013.273-.052.104-.078.17-.156.26-.078.092-.164.204-.235.274-.078.078-.16.162-.069.318.091.156.403.665.865 1.076.595.53 1.097.694 1.253.772.156.078.247.065.339-.039.091-.104.39-.455.494-.611.104-.156.208-.13.348-.078.14.052.886.417 1.039.494.153.078.256.117.294.182.039.065.039.377-.105.782z"/>
+            <a id="rsvpGoogleFormBtn" href="https://docs.google.com/forms/d/e/1FAIpQLScojIoqsYnAEjXtaOXAbOTQoSQ5J8tMiFew-Gu9KrTIBbnRRA/viewform" target="_blank" rel="noopener noreferrer" class="rsvp-google-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
               </svg>
-              <span>Share via WhatsApp</span>
+              <span>Open Google Form</span>
             </a>
             <button type="button" class="rsvp-reset-btn" onclick="resetRsvp()">Change Response</button>
           </div>
@@ -879,11 +910,16 @@
     })();
 
     /* ── RSVP FORM CONTROLLER (GOOGLE FORMS & SHEETS SYNC) ── */
+    var GOOGLE_FORM_VIEW_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScojIoqsYnAEjXtaOXAbOTQoSQ5J8tMiFew-Gu9KrTIBbnRRA/viewform';
+    var GOOGLE_FORM_RESPONSE_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScojIoqsYnAEjXtaOXAbOTQoSQ5J8tMiFew-Gu9KrTIBbnRRA/formResponse';
+    var ENTRY_NAME = 'entry.1712310200';
+    var ENTRY_ATTENDANCE = 'entry.281317823';
+
     function handleRsvpSubmit(e) {
       e.preventDefault();
       var successCard = document.getElementById('rsvpSuccess');
       var successText = document.getElementById('rsvpSuccessText');
-      var waBtn = document.getElementById('rsvpWhatsappBtn');
+      var googleBtn = document.getElementById('rsvpGoogleFormBtn');
 
       var nameInput = document.getElementById('guestName');
       var attendanceSelect = document.getElementById('rsvpAttendance');
@@ -908,10 +944,10 @@
       // Silently record directly into Google Forms & Google Sheets in the background
       try {
         var formData = new URLSearchParams();
-        formData.append('entry.1712310200', name);
-        formData.append('entry.281317823', attendance);
+        formData.append(ENTRY_NAME, name);
+        formData.append(ENTRY_ATTENDANCE, attendance);
 
-        fetch('https://docs.google.com/forms/d/e/1FAIpQLScojIoqsYnAEjXtaOXAbOTQoSQ5J8tMiFew-Gu9KrTIBbnRRA/formResponse', {
+        fetch(GOOGLE_FORM_RESPONSE_URL, {
           method: 'POST',
           mode: 'no-cors',
           headers: {
@@ -921,20 +957,27 @@
         }).catch(function () {});
       } catch (err) {}
 
+      // Pre-filled Google Form link with their name and response
+      var prefillUrl = GOOGLE_FORM_VIEW_URL + '?usp=pp_url&' + ENTRY_NAME + '=' + encodeURIComponent(name) + '&' + ENTRY_ATTENDANCE + '=' + encodeURIComponent(attendance);
+
+      // Open Google Form in a new tab immediately
+      try {
+        window.open(prefillUrl, '_blank');
+      } catch (openErr) {}
+
+      // Update the button inside modal to point to the Google Form
+      if (googleBtn) {
+        googleBtn.href = prefillUrl;
+      }
+
       // Display luxurious confirmation overlay
       successCard.style.display = 'flex';
 
       var isAttending = attendance.indexOf('Accept') !== -1;
       if (isAttending) {
-        successText.innerHTML = 'Dear <strong>' + name + '</strong>,<br>We are truly overjoyed and look forward to celebrating our wedding with you at Costa\'s Countryside, Goa on December 3, 2026!';
-        var msg = encodeURIComponent('Hi Ryan & Cheryl, I (' + name + ') joyfully accept your wedding invitation for December 3, 2026 in Goa! ✨');
-        waBtn.href = 'https://api.whatsapp.com/send?text=' + msg;
-        waBtn.style.display = 'inline-flex';
+        successText.innerHTML = 'Dear <strong>' + name + '</strong>,<br>We are truly overjoyed and look forward to celebrating our wedding with you at Costa\'s Countryside, Goa on December 3, 2026!<br><br><span style="color:#E5C378;font-size:12px;letter-spacing:0.04em;">Your response has been submitted to our Google Form.</span>';
       } else {
-        successText.innerHTML = 'Dear <strong>' + name + '</strong>,<br>Thank you for letting us know. You will be dearly missed on our special day.';
-        var msg = encodeURIComponent('Hi Ryan & Cheryl, thank you so much for the lovely wedding invitation. Regretfully I (' + name + ') will be unable to attend, but sending you both my heartfelt congratulations!');
-        waBtn.href = 'https://api.whatsapp.com/send?text=' + msg;
-        waBtn.style.display = 'inline-flex';
+        successText.innerHTML = 'Dear <strong>' + name + '</strong>,<br>Thank you for letting us know. You will be dearly missed on our special day.<br><br><span style="color:#E5C378;font-size:12px;letter-spacing:0.04em;">Your response has been submitted to our Google Form.</span>';
       }
     }
 
